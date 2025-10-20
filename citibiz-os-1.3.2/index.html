@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CitiBiz Desktop • v1.3.2</title>
+<link rel="stylesheet" href="/css/hud.css">
+<link rel="stylesheet" href="/css/desktop.css">
+</head><body>
+<div class="nav"><div class="brand">CITI<span style="color:#35d1ff">OS</span> <small style="opacity:.7">Desktop v1.3.2</small></div></div>
+<div id="desktop" class="container desktop">
+  <div class="taskbar">
+    <button class="dockbtn" onclick="Desktop.openApp('wallet')">Wallet</button>
+    <button class="dockbtn" onclick="Desktop.openApp('vault')">Vault</button>
+    <button class="dockbtn" onclick="Desktop.openApp('payments')">Payments</button>
+    <div style="margin-left:auto;opacity:.7">Ready</div>
+  </div>
+</div>
+<script type="module">
+import './runtime/desktop.js';
+</script>
+</body></html>

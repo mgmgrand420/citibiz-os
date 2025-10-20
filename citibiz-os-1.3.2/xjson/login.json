@@ -1,0 +1,88 @@
+{
+  "type": "ui.screen",
+  "title": "Login",
+  "layout": {
+    "type": "vstack",
+    "gap": 12
+  },
+  "components": [
+    {
+      "type": "text",
+      "value": "\ud83d\udd10 Local-first Sign In"
+    },
+    {
+      "type": "password",
+      "id": "pass",
+      "placeholder": "Vault password"
+    },
+    {
+      "type": "hstack",
+      "gap": 10,
+      "children": [
+        {
+          "type": "button",
+          "text": "Create Vault",
+          "action": {
+            "on": "click",
+            "do": [
+              {
+                "action": "vault.create",
+                "password": "{{#pass}}"
+              },
+              {
+                "action": "ui.toast",
+                "value": "Vault created. Download recommended."
+              },
+              {
+                "action": "ui.navigate",
+                "to": "dashboard"
+              }
+            ]
+          }
+        },
+        {
+          "type": "file",
+          "id": "vaultfile",
+          "accept": ".json,.vault"
+        },
+        {
+          "type": "button",
+          "text": "Import & Unlock",
+          "action": {
+            "on": "click",
+            "do": [
+              {
+                "action": "vault.import",
+                "file": "{{#vaultfile}}",
+                "password": "{{#pass}}"
+              },
+              {
+                "action": "ui.navigate",
+                "to": "dashboard"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "sep"
+    },
+    {
+      "type": "button",
+      "text": "Sign in with Wallet",
+      "action": {
+        "on": "click",
+        "do": [
+          {
+            "action": "wallet.login"
+          },
+          {
+            "action": "ui.navigate",
+            "to": "dashboard"
+          }
+        ]
+      }
+    }
+  ]
+}

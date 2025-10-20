@@ -1,0 +1,49 @@
+{
+  "actions": {
+    "ui.navigate": {
+      "impl": "uiNavigate"
+    },
+    "ui.toast": {
+      "impl": "uiToast"
+    },
+    "vault.create": {
+      "impl": "vaultCreate"
+    },
+    "vault.import": {
+      "impl": "vaultImport"
+    },
+    "vault.write": {
+      "impl": "vaultWrite"
+    },
+    "wallet.login": {
+      "impl": "walletLogin"
+    },
+    "asx.flow": {
+      "impl": "runNamedFlow"
+    }
+  },
+  "flows": {
+    "demoFlow": [
+      {
+        "dom.html.update": [
+          "#flowStatus",
+          "Running demo flow..."
+        ]
+      },
+      {
+        "if": true,
+        "then": {
+          "dom.html.toast": "Flow OK"
+        },
+        "else": {
+          "dom.html.toast": "Flow failed"
+        }
+      }
+    ]
+  },
+  "funcs": {
+    "Math.sum": "builtin:sum",
+    "dom.query.value": "dom.query.value",
+    "dom.html.update": "dom.html.update"
+  }
+}

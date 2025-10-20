@@ -1,0 +1,36 @@
+{
+  "type": "ui.screen",
+  "title": "System Boot",
+  "layout": {
+    "type": "vstack",
+    "gap": 12,
+    "align": "center"
+  },
+  "components": [
+    {
+      "type": "text",
+      "value": "\ud83d\udef0 CitiBiz OS v1.3.1b"
+    },
+    {
+      "type": "text",
+      "value": "Initializing memory implant\u2026 compiling contexts\u2026 wiring interfaces\u2026"
+    },
+    {
+      "type": "progress",
+      "value": 68
+    },
+    {
+      "type": "button",
+      "text": "Proceed to Login",
+      "action": {
+        "on": "click",
+        "do": [
+          {
+            "action": "ui.navigate",
+            "to": "login"
+          }
+        ]
+      }
+    }
+  ]
+}

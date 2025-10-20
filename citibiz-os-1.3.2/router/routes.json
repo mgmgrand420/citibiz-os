@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {
+      "path": "#/",
+      "page": "boot"
+    },
+    {
+      "path": "#/login",
+      "page": "login"
+    },
+    {
+      "path": "#/dashboard",
+      "page": "dashboard"
+    }
+  ],
+  "defaultPage": "boot"
+}

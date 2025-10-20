@@ -1,0 +1,81 @@
+{
+  "type": "ui.screen",
+  "title": "Dashboard",
+  "layout": {
+    "type": "vstack",
+    "gap": 12
+  },
+  "components": [
+    {
+      "type": "text",
+      "value": "\ud83d\udcca Sovereign dashboard \u2014 your data never leaves your device."
+    },
+    {
+      "type": "card",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vault ID: {{vault.id}}"
+        },
+        {
+          "type": "text",
+          "value": "Profile name: {{vault.data.profile.name || '\u2014'}}"
+        },
+        {
+          "type": "text",
+          "value": "Flow status:"
+        },
+        {
+          "type": "text",
+          "value": "",
+          "id": "flowStatus"
+        }
+      ]
+    },
+    {
+      "type": "hstack",
+      "gap": 10,
+      "children": [
+        {
+          "type": "input",
+          "id": "name",
+          "placeholder": "Set profile name"
+        },
+        {
+          "type": "button",
+          "text": "Save",
+          "action": {
+            "on": "click",
+            "do": [
+              {
+                "action": "vault.write",
+                "path": "data.profile.name",
+                "value": "{{#name}}"
+              },
+              {
+                "action": "ui.toast",
+                "value": "Saved to local encrypted vault."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "sep"
+    },
+    {
+      "type": "button",
+      "text": "Run Flow Example",
+      "action": {
+        "on": "click",
+        "do": [
+          {
+            "action": "asx.flow",
+            "name": "demoFlow"
+          }
+        ]
+      }
+    }
+  ]
+}
