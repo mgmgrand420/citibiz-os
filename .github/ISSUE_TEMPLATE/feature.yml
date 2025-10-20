@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose an enhancement
+title: "[FEAT] "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One sentence request
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      placeholder: Describe the feature, UX, and impact.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P3 (low)
+        - P2 (medium)
+        - P1 (high)
+    validations:
+      required: true
