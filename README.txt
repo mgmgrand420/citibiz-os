@@ -37,3 +37,34 @@ This system is designed to run as either a browser-based OS or a full desktop OS
 
 ### 📌 DIRECTORY MAP
 
+---
+
+### 📌 ROADMAP
+
+| Version | Upgrade |
+|---------|---------|
+| v1.3.x  | Desktop build + JSON-Store apps |
+| v1.4.x  | Plugin system (Store, Wallet, P2P) |
+| v1.5.x  | Multi-User + Remote Sync (optional) |
+
+---
+
+### 📌 LICENSE
+
+MIT License — open to build on, modify, or commercialize.
+
+---
+
+### 📌 AUTHOR
+
+Developed by **Michael (mgmgrand420)**  
+Powered by **JSON-OS Architecture**
+
+---
+
+### 📌 STATUS
+
+🟢 Engine online  
+🟢 Login Desk online  
+🟡 Desktop build in progress (this release cycle)
+
